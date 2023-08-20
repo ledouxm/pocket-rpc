@@ -1,0 +1,24 @@
+{
+    "name": "@pocket-rpc/ky",
+    "version": "0.1.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsup src/index.ts --dts --format cjs,esm"
+    },
+    "keywords": [],
+    "type": "module",
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@pocket-rpc/server": "workspace:*",
+        "@types/node": "^20.4.5",
+        "tsup": "^7.1.0",
+        "typescript": "^5.1.6"
+    },
+    "dependencies": {
+        "@pocket-rpc/client": "workspace:*",
+        "ky": "^0.33.3",
+        "ky-universal": "^0.12.0"
+    }
+}

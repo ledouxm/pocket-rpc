@@ -1,0 +1,23 @@
+{
+    "name": "fastify-axios",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "dev:server": "vite-node ./src/server.ts",
+        "dev:client": "vite-node ./src/client.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.4.5",
+        "typescript": "^5.1.6",
+        "vite-node": "^0.34.2"
+    },
+    "dependencies": {
+        "@pocket-rpc/axios": "workspace:^",
+        "@pocket-rpc/server": "workspace:^",
+        "@pocket-rpc/fastify": "workspace:^"
+    }
+}
