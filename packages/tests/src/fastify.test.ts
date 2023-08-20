@@ -1,9 +1,7 @@
-import { Type } from "@sinclair/typebox";
 import { ApiClient, makeAxiosClient } from "@pocket-rpc/axios";
-import { makeRouter, route } from "@pocket-rpc/server";
 import { makeFastifyRouter } from "@pocket-rpc/fastify";
 import { describe, expect, it } from "vitest";
-import { TestRouter, testRouter, testsWithExpectedResults } from "./utils";
+import { TestRouter, testRouter, testsWithExpectedResults } from ".";
 import { makeKyClient } from "@pocket-rpc/ky";
 import { makeOfetchClient } from "@pocket-rpc/ofetch";
 
@@ -24,14 +22,13 @@ describe("RPC tests using axios and fastify", () => {
             ({ path, method, payload, expected }) => {
                 it(`should make a request to ${path} with ${name}`, async () => {
                     try {
-                        const response = await ref.client[method](
+                        const response = await (ref.client as any)[method](
                             path,
                             payload
                         );
 
                         expect(response).toEqual(expected);
-                    } catch (e) {
-                        console.log(e);
+                    } catch (e: any) {
                         throw e;
                     }
                 });

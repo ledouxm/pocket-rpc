@@ -10,7 +10,9 @@ const makeAxiosFetcher = (): Fetcher => {
     const axiosInstance = axios.create();
 
     return async (method: Method, path: string, payload: Payload) => {
-        const response = await axiosInstance[method](path, {
+        const response = await axiosInstance.request({
+            method,
+            url: path,
             params: payload?.query,
             data: payload?.body,
             headers: payload?.headers,

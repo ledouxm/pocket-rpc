@@ -2,22 +2,25 @@
     "name": "tests",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
-        "test": "vitest"
+        "test": "vitest",
+        "build": "tsup src/index.ts --dts --format cjs,esm"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "tsup": "^7.1.0",
         "vitest": "^0.33.0"
     },
     "dependencies": {
-        "@sinclair/typebox": "^0.29.6",
         "@pocket-rpc/axios": "workspace:^",
-        "@pocket-rpc/ofetch": "workspace:^",
+        "@pocket-rpc/fastify": "workspace:^",
         "@pocket-rpc/ky": "workspace:^",
+        "@pocket-rpc/ofetch": "workspace:^",
         "@pocket-rpc/server": "workspace:^",
-        "@pocket-rpc/fastify": "workspace:^"
+        "@sinclair/typebox": "^0.29.6",
+        "ofetch": "^1.1.1"
     }
 }
