@@ -45,7 +45,7 @@ export const testRouter = makeRouter({
     }),
     nested: {
         withAll: route({
-            method: "patch",
+            method: "post",
             schema: {
                 body: Type.Object({
                     id: Type.Number(),
@@ -112,7 +112,7 @@ export const testsWithExpectedResults: {
     },
     {
         path: "nested/withAll",
-        method: "patch",
+        method: "post",
         payload: { body: { id: 1 }, query: { id: 10 }, headers: { id: 100 } },
         expected: 111,
     },
