@@ -1,6 +1,6 @@
 {
     "name": "tests",
-    "version": "1.0.0",
+    "version": "0.3.0",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
@@ -19,7 +19,7 @@
         "@pocket-rpc/fastify": "workspace:^",
         "@pocket-rpc/ky": "workspace:^",
         "@pocket-rpc/ofetch": "workspace:^",
-        "@pocket-rpc/server": "workspace:^",
+        "@pocket-rpc/server": "0.3.0",
         "@sinclair/typebox": "^0.29.6",
         "ofetch": "^1.1.1"
     }
