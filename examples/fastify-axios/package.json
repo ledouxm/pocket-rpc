@@ -17,7 +17,7 @@
     },
     "dependencies": {
         "@pocket-rpc/axios": "workspace:^",
-        "@pocket-rpc/server": "workspace:^",
-        "@pocket-rpc/fastify": "workspace:^"
+        "@pocket-rpc/fastify": "workspace:^",
+        "@pocket-rpc/server": "workspace:^"
     }
 }

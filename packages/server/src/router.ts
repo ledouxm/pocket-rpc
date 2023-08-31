@@ -1,4 +1,10 @@
-import { AnyRouteMap, FlattenedRouter, Method, Route, Router, RouteSchema } from "./types";
+import {
+    AnyRouteMap,
+    FlattenedRouter,
+    Method,
+    Route,
+    RouteSchema,
+} from "./types";
 
 export const isARoute = (route: any): route is Route<any, any, any> => {
     return route.method !== undefined;
@@ -22,6 +28,9 @@ const flattenRouter = <const R extends AnyRouteMap>(router: R) => {
     return obj as FlattenedRouter<R>;
 };
 
-export const route = <E extends RouteSchema, M extends Method, R>(route: Route<E, M, R>) => route;
-export const makeRouter = <E extends AnyRouteMap>(routes: E): FlattenedRouter<E> =>
-    flattenRouter(routes);
+export const route = <E extends RouteSchema, M extends Method, R>(
+    route: Route<E, M, R>
+) => route;
+export const makeRouter = <E extends AnyRouteMap>(
+    routes: E
+): FlattenedRouter<E> => flattenRouter(routes);

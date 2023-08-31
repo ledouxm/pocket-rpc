@@ -2,10 +2,12 @@ import { TypeBoxTypeProvider } from "@fastify/type-provider-typebox";
 import { RouteSchema, Router } from "@pocket-rpc/server";
 import Fastify, { FastifyInstance, FastifyServerOptions } from "fastify";
 
+export interface PocketRpcFastifyInstance extends FastifyInstance {}
+
 export const makeFastifyRouter = <R extends Router>(
     router: R,
     fastifyOpts: FastifyServerOptions = {}
-): FastifyInstance => {
+): PocketRpcFastifyInstance => {
     const fastify =
         Fastify(fastifyOpts).withTypeProvider<TypeBoxTypeProvider>();
 
@@ -50,5 +52,3 @@ const removeUndefineds = (obj: any) => {
     });
     return newObj;
 };
-
-export type { FastifyInstance };
