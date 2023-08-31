@@ -1,6 +1,6 @@
 {
     "name": "@pocket-rpc/client",
-    "version": "0.2.0",
+    "version": "0.3.2",
     "description": "",
     "main": "dist/index.js",
     "scripts": {
@@ -10,9 +10,9 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@types/node": "^20.4.5",
-        "tsup": "^7.1.0",
-        "typescript": "^5.1.6",
-        "@pocket-rpc/server": "workspace:*"
+        "@types/node": "^0.3.2",
+        "tsup": "^0.3.2",
+        "typescript": "^0.3.2",
+        "@pocket-rpc/server": "0.3.2"
     }
 }
