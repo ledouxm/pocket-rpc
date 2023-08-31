@@ -168,23 +168,23 @@ importers:
         specifier: ^0.33.0
         version: 0.33.0
 
-  packages/tests:
+  tests:
     dependencies:
       '@pocket-rpc/axios':
         specifier: workspace:^
-        version: link:../clients/axios
+        version: link:../packages/clients/axios
       '@pocket-rpc/fastify':
         specifier: workspace:^
-        version: link:../adapters/fastify
+        version: link:../packages/adapters/fastify
       '@pocket-rpc/ky':
         specifier: workspace:^
-        version: link:../clients/ky
+        version: link:../packages/clients/ky
       '@pocket-rpc/ofetch':
         specifier: workspace:^
-        version: link:../clients/ofetch
+        version: link:../packages/clients/ofetch
       '@pocket-rpc/server':
-        specifier: workspace:^
-        version: link:../server
+        specifier: 0.3.1
+        version: link:../packages/server
       '@sinclair/typebox':
         specifier: ^0.29.6
         version: 0.29.6
