@@ -43,7 +43,7 @@ importers:
         specifier: ^3.3.0
         version: 3.3.0(@sinclair/typebox@0.29.6)
       '@pocket-rpc/server':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../../server
       '@sinclair/typebox':
         specifier: ^0.29.6
@@ -68,14 +68,14 @@ importers:
   packages/clients/axios:
     dependencies:
       '@pocket-rpc/client':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../client
       axios:
         specifier: ^1.4.0
         version: 1.4.0
     devDependencies:
       '@pocket-rpc/server':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../../server
       '@types/node':
         specifier: ^20.4.5
@@ -90,7 +90,7 @@ importers:
   packages/clients/client:
     devDependencies:
       '@pocket-rpc/server':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../../server
       '@types/node':
         specifier: ^20.4.5
@@ -105,7 +105,7 @@ importers:
   packages/clients/ky:
     dependencies:
       '@pocket-rpc/client':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../client
       ky:
         specifier: ^0.33.3
@@ -115,7 +115,7 @@ importers:
         version: 0.12.0(ky@0.33.3)
     devDependencies:
       '@pocket-rpc/server':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../../server
       '@types/node':
         specifier: ^20.4.5
@@ -130,14 +130,14 @@ importers:
   packages/clients/ofetch:
     dependencies:
       '@pocket-rpc/client':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../client
       ofetch:
         specifier: ^1.1.1
         version: 1.1.1
     devDependencies:
       '@pocket-rpc/server':
-        specifier: workspace:*
+        specifier: 0.5.0
         version: link:../../server
       '@types/node':
         specifier: ^20.4.5
@@ -183,7 +183,7 @@ importers:
         specifier: workspace:^
         version: link:../packages/clients/ofetch
       '@pocket-rpc/server':
-        specifier: 0.3.1
+        specifier: workspace:^
         version: link:../packages/server
       '@sinclair/typebox':
         specifier: ^0.29.6

@@ -19,7 +19,7 @@
         "@pocket-rpc/fastify": "workspace:^",
         "@pocket-rpc/ky": "workspace:^",
         "@pocket-rpc/ofetch": "workspace:^",
-        "@pocket-rpc/server": "0.3.1",
+        "@pocket-rpc/server": "workspace:^",
         "@sinclair/typebox": "^0.29.6",
         "ofetch": "^1.1.1"
     }

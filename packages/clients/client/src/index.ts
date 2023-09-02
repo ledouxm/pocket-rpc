@@ -1,7 +1,6 @@
 import type {
     Router,
     Method,
-    Awaitable,
     MethodsOf,
     ResponseOf,
     SchemaOf,
