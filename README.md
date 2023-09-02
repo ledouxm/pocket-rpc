@@ -119,27 +119,23 @@ import { makeKyClient } from "@pocket-rpc/ky";
 You must define a Fetcher such as:
 
 ```ts
-import { type Fetcher, ApiClient } from "@pocket-rpc/client";
+import { type Fetcher, type Payload, ApiClient } from "@pocket-rpc/client";
 
-const makeAxiosFetcher = (): Fetcher => {
-    const axiosInstance = axios.create();
+const fetcher = async (method: Method, path: string, payload: Payload) => {
+    const response = await axios.request({
+        method,
+        url: path,
+        params: payload?.query,
+        data: payload?.body,
+        headers: payload?.headers,
+    });
 
-    return async (method: Method, path: string, payload: Payload) => {
-        const response = await axiosInstance.request({
-            method,
-            url: path,
-            params: payload?.query,
-            data: payload?.body,
-            headers: payload?.headers,
-        });
-
-        return response.data;
-    };
+    return response.data;
 };
 ```
 
 Then you can use it with ApiClient
 
 ```ts
-const api = new ApiClient<AppRouter>(makeAxiosFetcher());
+const api = new ApiClient<AppRouter>(fetcher);
 ```
