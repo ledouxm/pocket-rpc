@@ -1,5 +1,5 @@
 import { makeRouter, route } from "@pocket-rpc/server";
-import { makeFastifyRouter } from "../../../packages/adapters/fastify/dist";
+import { makeFastifyRouter } from "@pocket-rpc/fastify";
 
 const router = makeRouter({
     hello: route({
